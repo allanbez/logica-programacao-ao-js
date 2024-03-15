@@ -50,3 +50,18 @@ operadores de atribuiçao:
 *`%=`-> reatribuiçao com resto da divisao
 * `++`-> atribuição com **incremento 1** (pode ser *pré* ou *pós* incrementação).EX `numero ++`(pós-incremento)ou `++ numero`(pré incremento)
 * `--`-> atribuição com **decremento 1** (pode ser *pré* ou *pòs* decrementado). EX `numero--`(pós incremento) ou `-- numero` (pré incremento)
+
+## operadores-comparacao.js
+
+Neste arquivo conhecemos os operadores de comparacao e a estrutura lógica de decisao **if-else**
+~~~js
+if (condicao) {
+    console.log('verdadeiro');
+} else {
+    console.log('falso')
+}
+~~~
+esta estrutura exibe no console se a condiçao testada e verdadeira ou falsa. a condiçao armazena o resultado da **comparaçao entre duas variaveis**, como segue :
+
+
+

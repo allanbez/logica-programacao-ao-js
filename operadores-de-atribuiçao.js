@@ -5,9 +5,9 @@ console.log (`o numero e inicialmente igual a  ${numero}`);
 numero = 10;
 console.log(`apos reatribuir somando o numero 10: ${numero +=10}`);
 
-console.log (`reatribuind e subtraindo 10 ${numero -=10}`);
+console.log (`reatribuindo e subtraindo 10 ${numero -=10}`);
 
-console.log (`reatribuind e multiplicando 10 ${numero *=10}`);
+console.log (`reatribuindo e multiplicando 10 ${numero *=10}`);
 
 console.log (`reatribuindo e dividindo 10 ${numero /=10}`);
 
