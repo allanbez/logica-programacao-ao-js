@@ -1,3 +1,6 @@
+function calculaIMC(){
+
+
 const
   peso = window.prompt ('digite seu peso'),
   altura = window.prompt('digite sua altura'),
@@ -20,4 +23,5 @@ else if(media <= 39.9){
 }
 else {
     window.alert(`obesidade grau 3 valor do imc ${media.toFixed(2)}`)
+}
 }
