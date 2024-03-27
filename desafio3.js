@@ -1,3 +1,4 @@
+function convertetemperatura(){
 const
 temperatura = parseFloat(window.prompt ('digite a temperatura')),
 escalaatual=window.prompt ('digite a unidade de temperatura').toLowerCase(),
@@ -39,6 +40,10 @@ else if (escalaatual == "k" && resultado == "f"){
 else {
     window.alert(`resultado inválido`);
 }
+<<<<<<< HEAD
 }else{
     window.alert(`digite um numero`)
 }
+=======
+}
+>>>>>>> b6db958e26d23f05b8fa1a45698cd5c42429a554
