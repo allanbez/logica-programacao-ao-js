@@ -1,49 +1,67 @@
-function convertetemperatura(){
-const
-temperatura = parseFloat(window.prompt ('digite a temperatura')),
-escalaatual=window.prompt ('digite a unidade de temperatura').toLowerCase(),
-convercao=window.prompt('converção para sua temperatura').toLowerCase();
+function converteTemperatura() {
 
-const
-celsiusfahrenheint= (temperatura*9/5) +32,
-celsiuskelvin= temperatura + 273.15,
-fahrenheintcelsius=(temperatura - 32)*5/9,
-fahrenheintkelvin=(temperatura+459.67)*5/9,
-kelvincelsius= temperatura + 273.15,
-kelvinfahreheint = temperatura * 9/5-459.67;
+    const temperaturaAtual = parseFloat(window.prompt('Digite a temperatura'));
     
-if (!isNaN(temperatura)){
-    escalaatual=window.prompt ('digite a unidade de temperatura').toLowerCase(),
-convercao=window.prompt('converção para sua temperatura').toLowerCase();
+    if (!isNaN(temperaturaAtual)) {
+    
+        const
+            escalaAtual = window.prompt('Digite a escala atual: \nC -> Celsius, F -> Fahrenheit, K -> Kelvin').toUpperCase(),
+            
+            escalaConversao = window.prompt('Digite a escala para conversão: \nC -> Celsius, F -> Fahrenheit, K -> Kelvin').toUpperCase();
+    
+        if (escalaAtual === 'C') {
+    
+            if (escalaConversao === 'K') {
+                window.alert(`${temperaturaAtual} em ${escalaAtual} -> ${temperaturaAtual + 273.15} em ${escalaConversao}`);
+    
+            } else if (escalaConversao === 'F') {
+                window.alert(`${temperaturaAtual} em ${escalaAtual} -> ${(temperaturaAtual * 9 / 5) + 32} em ${escalaConversao}`);
+    
+            } else if (escalaConversao === 'C') {
+                window.alert(`Escala selecionada: ${escalaConversao}. Selecione uma escala de CONVERSÃO diferente da ATUAL.`);
+    
+            } else {
+                window.alert(`Escala selecionada: ${escalaConversao}. Essa escala não existe ou não está disponível neste programa.`);
+            }
+    
+        } else if (escalaAtual === 'F') {
+    
+            if (escalaConversao === 'K') {
+                window.alert(`${temperaturaAtual} em ${escalaAtual} -> ${(temperaturaAtual + 459.67) * 5 / 9} em ${escalaConversao}`);
+    
+            } else if (escalaConversao === 'C') {
+                window.alert(`${temperaturaAtual} em ${escalaAtual} -> ${(temperaturaAtual - 32) * 5 / 9} em ${escalaConversao}`);
+    
+            } else if (escalaConversao === 'F') {
+                window.alert(`Escala selecionada: ${escalaConversao}. Selecione uma escala de CONVERSÃO diferente da ATUAL.`);
+    
+            } else {
+                window.alert(`Escala selecionada: ${escalaConversao}. Essa escala não existe ou não está disponível neste programa.`);
+            }
+    
+        } else if (escalaAtual === 'K') {
+    
+            if (escalaConversao === 'C') {
+                window.alert(`${temperaturaAtual} em ${escalaAtual} -> ${temperaturaAtual - 273.15} em ${escalaConversao}`);
+    
+            } else if (escalaConversao === 'F') {
+                window.alert(`${temperaturaAtual} em ${escalaAtual} -> ${temperaturaAtual * 9 / 5 - 459.67} em ${escalaConversao}`);
+    
+            } else if (escalaConversao === 'K') {
+                window.alert(`Escala selecionada: ${escalaConversao}. Selecione uma escala de CONVERSÃO diferente da ATUAL.`);
+    
+            } else {
+                window.alert(`Escala selecionada: ${escalaConversao}. Essa escala não existe ou não está disponível neste programa.`);
+            }
+    
+        } else {
+            window.alert(`Escala selecionada: ${escalaAtual}. A escala ATUAL não existe ou não está disponível neste programa.`);
+        }
+    
+    } else {
+        window.alert('O número digitado para conversão não é um número válido.');
+    }
 
-  
+}
 
 
-if(escalaatual=="c" && convercao == "f"){
-    window.alert (`temperatura =${celsiusfahrenheint}`);
-} 
-else if(escalaatual=="c"&& convercao == "k"){
-    window.alert (`temperatura=${celsiuskelvin}`);
-}
-else if (escalaatual=="f" && convercao == "c"){
-    window.alert (`temperatura=${fahrenheintcelsius}`);
-}
-else if (escalaatual== "f" && convercao =="k"){
-    window.alert (`temperatura=${fahrenheintkelvin}`);
-}
-else if (escalaatual == "k" && resultado =="c"){
-    window.alert(`temperatura=${kelvincelsius}`);
-}
-else if (escalaatual == "k" && resultado == "f"){
-    window.alert (`temperatura${kelvinfahreheint}`);
-}
-else {
-    window.alert(`resultado inválido`);
-}
-<<<<<<< HEAD
-}else{
-    window.alert(`digite um numero`)
-}
-=======
-}
->>>>>>> b6db958e26d23f05b8fa1a45698cd5c42429a554

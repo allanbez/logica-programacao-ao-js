@@ -1,59 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <body>
-<<<<<<< HEAD
-    <label for="peso">Peso:</label>
-    <input type="number" id="peso" step="0.5" min="0" max="1000">
-
-    <label for="altura">Altura:</label>
-    <input type="number" id="altura" step="0.01" min="0" max="3">
-
-    <button type="button" id="btCalcIMC">Calcular IMC</button>
-    <button type="reset">Limpar</button>
-
-    <script src="desafio2.js"></script>
-    <script src="desafio3.js"></script>
-    <script>
-        document.querySelector('#btCalcIMC').addEventListener('click', function () {
-            const peso = document.querySelector('#peso').value;
-            const altura = document.querySelector('#altura').value;
-            const imc = calculaIMC(peso, altura);
-            console.log(imc);
-        });
-        </script>
-=======
     <h1>Programinhas</h1>
     <!-- TODO: eliminar esses botões -->
     <button type="button" onclick="calculaIMC()">Calculadora IMC</button>
     <button type="button" onclick="converteTemperatura()">Conversor Temperatura</button>
 
     <h2>Calculadora de IMC</h2>
->>>>>>> b6db958e26d23f05b8fa1a45698cd5c42429a554
-    
-    <form action="" id="formIMC">
-        
-        
-        <label for="peso">Peso:</label>
-        <input type="number" id="peso" step="0.5" min="0" max="1000">
-        
-        <label for="altura">Altura:</label>
-        <input type="number" id="altura" step="0.01" min="0" max="3">
-        
-        <button type="button" id="btCalcIMC">Calcular IMC</button>
-        <button type="reset">Limpar</button>
+
+<form id="resultadoIMC">
 
     
-        </form>
+    <label for="peso">Peso:</label>
+    <input type="number" id="peso" step="0.5" min="0" max="1000">
+    
+    <label for="altura">Altura:</label>
+    <input type="number" id="altura" step="0.01" min="0" max="3">
+    
+    <button type="button" id="btCalcIMC">Calcular IMC</button>
+    <button type="reset" id="btreset">Limpar</button>
+    
+    </form>
+    <div id="resultadoIMC"></div>
+    <h2>Conversor de temperatura</h2>
 
-        <div id="resultdoIMC">
+    <form action="">
+        <label for="valorTemperatura">temperatura</label>
+        <input type="number" id="valorTemperatura">
 
-        </div>
+        <label for="escalAtual">de</label>
         
+        <select id="escalaAtual">
+            <option value="C" selected >celsius</option>
+            <option value="F" selected >fahrenheit</option>
+            <option value="K" selected >kelvin</option>
+        
+        </select>
+
+        <label for="escalaConvertida">para</label>
+        <select id="escalaConvertida">
+            <option value="C" selected >celsius</option>
+            <option value="F" selected >fahrenheit</option>
+            <option value="K" selected >kelvin</option>
+        
+        </select>
+
+            <button type="botton">converter</button>
+            <button type="reset">limpar</button>
+            
+
+
+    </form>
     <script src="desafio2.js"></script>
     <script src="desafio3.js"></script>
     <script>
@@ -62,8 +64,11 @@
             const altura = document.querySelector('#altura').value;
             const imc = calculaIMC(peso, altura);
             console.log(imc);
-            document.querySelector('#resultadoIMC').innerHTML =IMC;
+            document.querySelector('#resultadoIMC').innerHTML = imc;
         });
-        </script>
+            document.querySelector('#btreset').addEventListener(`click`, function(){
+            document.querySelector('#resultadoIMC').innerHTML = "";
+        });
+    </script>
 </body>
 </html>
