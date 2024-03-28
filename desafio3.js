@@ -1,67 +1,68 @@
-function converteTemperatura() {
+function converteTemperatura(temperaturaAtual, escalaAtual, escalaConversao) {
 
-    const temperaturaAtual = parseFloat(window.prompt('Digite a temperatura'));
-    
+    let temperaturaConvertida, msgErro = "ok";
     if (!isNaN(temperaturaAtual)) {
-    
-        const
-            escalaAtual = window.prompt('Digite a escala atual: \nC -> Celsius, F -> Fahrenheit, K -> Kelvin').toUpperCase(),
-            
-            escalaConversao = window.prompt('Digite a escala para conversão: \nC -> Celsius, F -> Fahrenheit, K -> Kelvin').toUpperCase();
-    
+
         if (escalaAtual === 'C') {
-    
+
             if (escalaConversao === 'K') {
-                window.alert(`${temperaturaAtual} em ${escalaAtual} -> ${temperaturaAtual + 273.15} em ${escalaConversao}`);
-    
+                temperaturaConvertida = temperaturaAtual + 273.15;
+
             } else if (escalaConversao === 'F') {
-                window.alert(`${temperaturaAtual} em ${escalaAtual} -> ${(temperaturaAtual * 9 / 5) + 32} em ${escalaConversao}`);
-    
+                temperaturaConvertida = (temperaturaAtual * 9 / 5) + 32;
+
             } else if (escalaConversao === 'C') {
-                window.alert(`Escala selecionada: ${escalaConversao}. Selecione uma escala de CONVERSÃO diferente da ATUAL.`);
-    
+                temperaturaConvertida = (`Escala selecionada: ${escalaConversao}. Selecione uma escala de CONVERSÃO diferente da ATUAL.`);
+
             } else {
-                window.alert(`Escala selecionada: ${escalaConversao}. Essa escala não existe ou não está disponível neste programa.`);
+                temperaturaConvertida = (`Escala selecionada: ${escalaConversao}. Essa escala não existe ou não está disponível neste programa.`);
             }
-    
+
         } else if (escalaAtual === 'F') {
-    
+
             if (escalaConversao === 'K') {
-                window.alert(`${temperaturaAtual} em ${escalaAtual} -> ${(temperaturaAtual + 459.67) * 5 / 9} em ${escalaConversao}`);
-    
+                temperaturaConvertida = (temperaturaAtual + 459.67) * 5 / 9
+
+
             } else if (escalaConversao === 'C') {
-                window.alert(`${temperaturaAtual} em ${escalaAtual} -> ${(temperaturaAtual - 32) * 5 / 9} em ${escalaConversao}`);
-    
+                temperaturaConvertida = (temperaturaAtual - 32) * 5 / 9;
+
+
             } else if (escalaConversao === 'F') {
-                window.alert(`Escala selecionada: ${escalaConversao}. Selecione uma escala de CONVERSÃO diferente da ATUAL.`);
-    
+                temperaturaConvertida = (`Escala selecionada: ${escalaConversao}. Selecione uma escala de CONVERSÃO diferente da ATUAL.`);
+
             } else {
-                window.alert(`Escala selecionada: ${escalaConversao}. Essa escala não existe ou não está disponível neste programa.`);
+                temperaturaConvertida = (`Escala selecionada: ${escalaConversao}. Essa escala não existe ou não está disponível neste programa.`);
             }
-    
+
         } else if (escalaAtual === 'K') {
-    
+
             if (escalaConversao === 'C') {
-                window.alert(`${temperaturaAtual} em ${escalaAtual} -> ${temperaturaAtual - 273.15} em ${escalaConversao}`);
-    
+                temperaturaConvertida = temperaturaAtual - 273.15;
+
             } else if (escalaConversao === 'F') {
-                window.alert(`${temperaturaAtual} em ${escalaAtual} -> ${temperaturaAtual * 9 / 5 - 459.67} em ${escalaConversao}`);
-    
+                temperaturaConvertida = temperaturaAtual * 9 / 5 - 459.67;
+
             } else if (escalaConversao === 'K') {
-                window.alert(`Escala selecionada: ${escalaConversao}. Selecione uma escala de CONVERSÃO diferente da ATUAL.`);
-    
+                temperaturaConvertida = (`Escala selecionada: ${escalaConversao}. Selecione uma escala de CONVERSÃO diferente da ATUAL.`);
+
             } else {
-                window.alert(`Escala selecionada: ${escalaConversao}. Essa escala não existe ou não está disponível neste programa.`);
+                msgErro = (`Erro: Escala selecionada: ${escalaConversao}. Essa escala não existe ou não está disponível neste programa.`);
             }
-    
+
         } else {
-            window.alert(`Escala selecionada: ${escalaAtual}. A escala ATUAL não existe ou não está disponível neste programa.`);
+            msgErro = (`Erro: Escala selecionada: ${escalaAtual}. A escala ATUAL não existe ou não está disponível neste programa.`);
+
         }
-    
     } else {
-        window.alert('O número digitado para conversão não é um número válido.');
+        msgErro = ' Erro: O número digitado para conversão não é um número válido.';
     }
-
+    
+    return {
+        temperaturaAtual: temperaturaAtual,
+        escalaAtual: escalaAtual,
+        escalaConversao: escalaConversao,
+        temperaturaConvertida: temperaturaConvertida,
+        msgErro: msgErro
+    };
 }
-
-
