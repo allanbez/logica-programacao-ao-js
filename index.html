@@ -13,7 +13,7 @@
 
     <h2>Calculadora de IMC</h2>
 
-<form id="resultadoIMC">
+<form action="" id="formIMC">
 
     
     <label for="peso">Peso:</label>
@@ -26,37 +26,36 @@
     <button type="reset" id="btreset">Limpar</button>
     
     </form>
+
     <div id="resultadoIMC"></div>
+
     <h2>Conversor de temperatura</h2>
 
-    <form action="resultadotemperatura">
+    <form action="">
 
         <label for="valorTemperatura">temperatura</label>
         <input type="number" id="valorTemperatura">
 
-        <label for="escalAtual">de</label>
-        
+        <label for="escalaAtual">de</label>
         <select id="escalaAtual">
-            <option value="C" selected >celsius</option>
-            <option value="F" selected >fahrenheit</option>
-            <option value="K" selected >kelvin</option>
+            <option value="C" selected>celsius</option>
+            <option value="F" >fahrenheit</option>
+            <option value="K" >kelvin</option>
         
         </select>
 
         <label for="escalaConvertida">para</label>
         <select id="escalaConvertida">
-            <option value="C" selected >celsius</option>
-            <option value="F" selected >fahrenheit</option>
-            <option value="K" selected >kelvin</option>
+            <option value="C" >celsius</option>
+            <option value="F" selected>fahrenheit</option>
+            <option value="K" >kelvin</option>
         
         </select>
 
             <button type="button" id="btCalctemp">converter</button>
-            <button type="reset" id="btreset">limpar</button>
+            <button type="reset" id="btReset">limpar</button>
             
-           
-                
-                
+              
             </form>
 
             <div id="resultadotemperatura"></div>
@@ -78,15 +77,16 @@
 
 
 
-                document.querySelector('#btCalctemp').addEventListener('click', function () {
-                    const temperaturaAtual= document.querySelector('#valorTemperatura').value;
+                document.querySelector('#btCalctemp').addEventListener('click', function() {
+                    const temperaturaAtual = document.querySelector('#valorTemperatura').value;
                     const escalaAtual = document.querySelector('#escalaAtual').value;
                     const escalaConversao = document.querySelector('#escalaConvertida').value;
-                    const resultadotemperatura = converteTemperatura(temperaturaAtual, escalaAtual, escalaConversao);
-                    console.log(resultadotemperatura);
-                    document.querySelector('#resultadotemperatura').innerHTML = resultadotemperatura;
+
+                    const conversao = converteTemperatura(temperaturaAtual, escalaAtual, escalaConversao);
+
+                    document.querySelector('#resultadotemperatura').innerHTML = `Temperatura convertida: ${conversao.temperaturaConvertida + conversao.escalaConversao}`;
                 });
-                document.querySelector('#btreset').addEventListener(`click`, function(){
+                document.querySelector('#btReset').addEventListener(`click`, function(){
                 document.querySelector('#resultadotemperatura').innerHTML = "";
                 });
                 </script>
