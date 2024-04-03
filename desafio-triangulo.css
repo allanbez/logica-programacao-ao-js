@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Scribble&family=Tac+One&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Scribble&family=Sacramento&family=Tac+One&display=swap');
+
+body{
+    color: rgb(157, 10, 255);
+    background-color: black;
+    text-align: center;
+    
+}
+
+button{
+    background-color: rgb(212, 0, 255);
+    color: aliceblue;
+    padding: 1%;
+    margin: 80px;
+}
+h1{
+   color: blueviolet;
+   font-family: "Rubik Scribble", system-ui;
+
+}
+h3,li{
+    font-family: "Sacramento", cursivo;
+    font-size: 25px;
+}

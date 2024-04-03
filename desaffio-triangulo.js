@@ -8,7 +8,7 @@ function tipotriangulo(ladoA,ladoB,ladoC){
             return "isósceles";
 
         }else{
-            return "escaleno";
+            return "escalênoo";
         }
 }
 
