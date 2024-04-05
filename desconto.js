@@ -1,4 +1,6 @@
-function desconto(cliente, valor){
+function desconto(cliente){
+
+    let valor = 100.00;
 
 if (cliente === 'comum'){
     resultado = valor;
@@ -7,7 +9,7 @@ if (cliente === 'comum'){
     resultado = valor - (valor * 0.05);
 
 }else {
-    resultado=valor -(valor *0.1);
+    resultado = valor -(valor * 0.1);
 
 }
 

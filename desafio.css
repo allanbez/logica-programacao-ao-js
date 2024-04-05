@@ -1,0 +1,38 @@
+body{
+    background-color: black;
+    color: white;
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+button{
+    background-color: rgb(5, 176, 5);
+    color: white;
+    border-radius: 5px;
+    border:none;
+    
+}
+img{
+    width: 35rem;
+    height: 25rem;
+
+}
+button#btreset{
+    background-color: red;
+    text-align: center;
+}
+h1,h3{
+    text-align: center;
+}
+h1{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    border-color: rgb(174, 184, 116);
+}
+h5{
+margin-top: 3rem;
+}
+select option {
+    background-color: rgb(14, 233, 233);
+}

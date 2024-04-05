@@ -1,33 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<link rel="stylesheet" href="desafio.css">
+
 <body>
-<form action="">
-<h1>Museu do ipiranga</h1>
+    <form action="">
+        <h1>Museu do ipiranga</h1>
 
-<h3>Venhaa nos visitar no nosso museu que conta com vários artigos históricos</h3>
+        <h3>Venha nos visitar no nosso museu que conta com vários artigos históricos, para você se divertir com sua família!!!!</h3>
+        
+        <img src="Museu_do_Ipiranga.jpg">
+        <img src="museu-do-ipiranga2.jpg">
+        <h5>preço do ingresso:R$100,00</h5>
 
-    <button id="btreset">limpar</button>
-    <button id="btcomprar">garanta seu ingresso</button>
-    
-    <label for="comum">cliente</label>
-    <select type="number" id="comum">
-    <option value="vip">vip</option>
-    <option value="comum">comum</option>
-    <option value="funcionarios">funcionários</option>
-    </select>
-   
-    
+        
 
-    
+        <label for="comum">cliente</label>
+        <select type="number" id="comum">
+            <option value="vip">vip</option>
+            <option value="comum">comum</option>
+            <option value="funcionarios">funcionários</option>
+        </select>
+
+        <button id="btreset">limpar</button>
+        <button id="btComprar">garanta seu ingresso</button>
+
+        <p id="saida"></p>
+        <h4> Museu do Ipiranga é a sede do Museu Paulista, que é um museu especializado em história e cultural material e integra a Universidade de São Paulo.</h4>
+
+         <h4>   O edifício em que hoje estão instaladas as exposições e espaços para atividades educativas e culturais foi projetado para ser um monumento em comemoração à Proclamação da Independência, ocorrida em 1822. O edifício foi construído entre 1885 e 1890. Em 1895, o recém-criado Museu do Estado (Museu Paulista) foi transferido para o monumento.
+
+         </h4>
+            
+            <h4> assim que as histórias do Museu público mais antigo de São Paulo e do Monumento à Independência se misturaram e, desde então, ele ficou conhecido como Museu do Ipiranga.</h4>
 </body>
-<script src="desconto.js" ></script>
+<script src="desconto.js"></script>
 <script>
-document.querySelector
-    
+
+    document.querySelector("#btComprar").addEventListener('click', function (event) {
+        event.preventDefault(); 
+        escolha = document.getElementById('comum').value;
+        saida = desconto(escolha);
+        document.getElementById('saida').innerHTML = `Valor a pagar: ${saida}`;
+    })
+
 </script>
+
 </html>
