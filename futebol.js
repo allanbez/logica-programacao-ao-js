@@ -1,9 +1,9 @@
 function soma(time1,time2){
 
     if(time1 > time2) {
-        return 'Time 1 Vence'
+        return 'santos Vence'
     }else if (time2 > time1) {
-        return 'time 2 vence'
+        return 'palmeiras vence'
         }else 
         return 'EMPATE'
     }

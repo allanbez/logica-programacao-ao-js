@@ -1,0 +1,15 @@
+body{
+    text-align: center;
+    font-family: cursive;
+}
+h1{
+    font-size: large 2rem;
+}
+h2{
+    margin-top: 3rem;
+}
+button{
+    background-color: chocolate;
+    color: white;
+    
+}

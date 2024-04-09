@@ -1,56 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="nome.css">
 </head>
+
 <body>
-   <form action="">
-    <label for="nomeinclisao">nome para incluir :</label>
-    <input type="text" id="nomeInclusao" required>
+
+  <h1>concorra a um celular novinho de graça!!!!</h1>
+
+  <h2>venha se cadastrar totalmente de graça e concorrar a um Sansung S24</h2>
+
+  <h3>consulte se seu nome ja está cadastrado:</h3>
+  <form action="">
+
+    <label for="nome">nome para incluir :</label>
+    <input type="text" id="nome">
 
     <button type="reset" id="btcadastro">cadastrar</button>
 
-    <button type="button" id="btmostrar">mostrar</button>
+    <button type="button" id="btpesquisar" class="oculto">pesquisar</button>
 
-    
-    
-</form>
-<di id="resultado"></di>
-   <script>
-   
-    let nomes =[];
 
-    document.querySelector('#btcadastro').addEventListener('click',()=>{
 
-        if(nomes.length < 10){
+  </form>
 
-        
+  <div id="resultado"></div>
 
-        nomes.push(document.querySelector('#nomeInclusao').value);
-         } else{
-          if(nomes.push(document.querySelector('#nomeInclusao').value)){
-            console.log('achei');
-          }else{
-            consle.log('nao achei')
-          }
+  <script>
 
+
+
+    let nomes = [];
+    document.addEventListener('keydow',(evento) =>{
+      if(evento.key === 'Enter'){
+        evento.preventDefault();
+        if(nomes.length<10){
+          document.querySelector('btcadastro').click();
+        }else{
+          document.querySelector('btpesquisar').click();
         }
-    document.querySelector('#btmostrar').addEventListener('click',()=>{
-
-        
-        nomes.forEach((nome)=>{
-            document.querySelector('#resultado').innerHTML+= nome + '<br>';
-
-        })
+      }
     })
+
+    document.querySelector('#btcadastro').addEventListener('click', () => {
+
+      nomes.push(document.querySelector('#nome').value);
+
+      if (nomes.length === 10) {
+
+
+        document.querySelector('label[for="nome"]').innerHTML = 'nome para pesquisar';
+
+        document.querySelector('#btcadastro').classList.add('oculto');
+
+        document.querySelector('#btpesquisar').classList.remove('oculto')
+
+
+
+
+
+      }
+
+    })
+
+    document.querySelector('#btpesquisar').addEventListener('click', () => {
+
+      const nomebuscar = document.querySelector('#nome').value;
+
+      if (nomes.includes(nomebuscar)) {
+        document.querySelector('#resultado').innerHTML = 'Parábens seu nome ja está cadastrado';
+      } else {
+
+        document.querySelector('#resultado').innerHTML = 'Cadastre-se primeiro antes de pesquisar';
+      }
+
+
+
+    })
+
     // TODO:
     // 1. ao clicar em cadastrar, limpar o input
     // 2. limitar 10 nomes
     // 3. apos o 10 nome, o campo permite buscar um nome no array
     // 4. exibir se o nome foi encontrado 
 
-   </script> 
+  </script>
 </body>
+
 </html>

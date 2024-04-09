@@ -1,0 +1,22 @@
+button{
+    color: rgb(177, 235, 6);
+    background-color: black;
+}
+a{
+    color: yellow;
+    background-color: black;
+}
+body{
+    color: yellow;
+    background-color: black;
+    text-align: center;
+}
+h1,h2,h3{
+    font-family: monospace;
+}
+h2{
+    margin-top:  5rem;
+}
+body{
+    margin: auto;
+}

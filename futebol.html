@@ -8,6 +8,28 @@
     <link rel="stylesheet" href="futebol.css">
 </head>
 <body>
-    
+    <h1>Faça sua simulação do campeonato paulista!!!</h1>
+    <h3>coloque os resultados a baixo:</h3>
+
+    <label for="time1">santos:</label>
+    <input type="number" id="time1">
+
+    <label for="time2">palmeiras:</label>
+    <input type="number" id="time2">
+
+    <button type="reset" id="resetar">resetar resultado</button>
+    <button type="button" id="btcalcular">quem ganhou</button>
+
+    <div id="resultado"></div>
+
+    <script src="futebol.js"></script>
+    <script>
+        document.querySelector('#btcalcular').addEventListener('click', function(){
+            let time1 = document.querySelector('#time1').value;
+            let time2 = document.querySelector('#time2').value;
+            let resultado = soma(time1,time2);
+            document.querySelector('#resultado').innerHTML = resultado;
+        })
+    </script>    
 </body>
 </html>
