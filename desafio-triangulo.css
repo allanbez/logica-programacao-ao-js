@@ -20,7 +20,16 @@ h1{
    font-family: "Rubik Scribble", system-ui;
 
 }
-h3,li{
+h3, li{
+   
+
     font-family: "Sacramento", cursivo;
     font-size: 25px;
+}
+ul{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0;
 }
