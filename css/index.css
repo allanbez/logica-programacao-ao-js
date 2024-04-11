@@ -1,10 +1,17 @@
 button{
     color: rgb(177, 235, 6);
     background-color: black;
+    flex-direction: column;
 }
 a{
     color: yellow;
     background-color: black;
+    text-decoration: none;
+}
+
+button{
+    border: none;
+    
 }
 body{
     color: yellow;

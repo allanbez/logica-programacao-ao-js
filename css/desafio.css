@@ -36,3 +36,6 @@ margin-top: 3rem;
 select option {
     background-color: rgb(14, 233, 233);
 }
+a{
+    text-decoration: none;
+}

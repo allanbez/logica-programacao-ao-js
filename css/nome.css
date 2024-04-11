@@ -12,4 +12,11 @@ button{
     background-color: chocolate;
     color: white;
     
+    
+}
+.gradiente-fundo{
+    background:linear-gradient(to right,#f8f8f8,#070706);
+    width: 100%;
+    height: 100vh;
+
 }
