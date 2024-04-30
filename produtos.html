@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>produtos com desconto</title>
+    <link rel="stylesheet" href="produtos.css">
+    <link rel="stylesheet" href="produtos.js">
+</head>
+
+<body>
+    <main>
+
+        <h1 class="titulo-pagina">produtos com desconto</h1>
+        <form action="">
+            <div class="controle-form">
+                <label for="codigoproduto">codigo do produto</label>
+                <input type="text" id="codigoproduto">
+
+            </div>
+            <div class="controle-form">
+                <label for="qtdeproduto">quantidade</label>
+                <input type="text " id="qtdeproduto" required>
+
+            </div>
+            <div class="botoes">
+                <button type="button" class="acao-positiva" id="btcalcular">calcular</button>
+                <button type="reset" class="acao-negativa">limpar</button>
+            </div>
+            <div id="resultado"></div>
+        </form>
+    </main>
+    
+    <script>
+        document.querySelector('#btcalcular').addEventListener('click', () => {
+            const codigoproduto = Number(document.querySelector('#codigoproduto').value);
+
+            const qtdeproduto = Number(document.querySelector('#qtdeproduto').value);
+
+            const produto = calculadesconto(codigoproduto, qtdeproduto);
+
+            const pdescricao = document.createElement('p');
+
+            pdescricao.innerHTML = produto.descricao;
+            pdescricao.setAttribute('data-produto', produto.codigo);
+
+
+            const pvalorfinal = document.createElement('p');
+            pvalorfinal.innerHTML = produto.valorfinal.toFixed(2);
+            pvalorfinal.classList.add('monetario')
+
+            document.querySelector('#resultado').append(pdescricao, pvalorfinal);
+        })
+        const produtos = [
+            {
+                codigo: 1,
+                preco: 5.99,
+                descricao: "salgado"
+            },
+
+            {
+                codigo: 2,
+                preco: 4.50,
+                descricao: "snikers"
+            },
+            {
+                codigo: 3,
+                preco: 0.5,
+                descricao: "quebra-queixo"
+            }
+        ];
+        
+        function calculadesconto(codigoproduto, qtdeproduto) {
+
+            let preco;
+            let desconto;
+            let valorfinal;
+            let descricao;
+
+            for (let i = 0; i < produtos.length; i++) {
+                if (produtos[i].codigo === codigoproduto) {
+                    preco = produtos[i].preco;
+                    descricao = produtos[i].descricao;
+                }
+            }
+            if (qtdeproduto >= 3 && qtdeproduto <= 5) {
+                desconto = 0.02;
+            } else if (qtdeproduto >= 6 && qtdeproduto <= 10) {
+                desconto = 0.03;
+            } else if (qtdeproduto > 10) {
+                desconto = 0.05;
+            } else {
+                desconto = 0;
+            }
+
+
+            valorfinal = (preco * qtdeproduto) - (preco * qtdeproduto * desconto);
+
+            return {
+                codigo: codigoproduto,
+                preco: preco,
+                descricao: descricao,
+                valorfinal: valorfinal
+            };
+
+        }
+    </script>
+
+</body>
+
+</html>
