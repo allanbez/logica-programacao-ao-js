@@ -1,8 +1,9 @@
 body{
     background-image: url(santos.jpg);
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: cover;
     text-align: center;
+    position: relative;
 
 }
 input{
@@ -12,4 +13,36 @@ input{
 button{
     background-color: black;
     color: white;
+}
+#btcalcular{
+    padding: 10px 20px;
+    background-color: #10db4d;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+}
+#btcalcular:hover {
+    background-color: #038524;
+}
+
+#btcalcular:active {
+    background-color: #010208;
+}
+
+
+#resetar{
+    padding: 10px 20px;
+    background-color: #d90a0d;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+#resetar:hover{
+background-color: rgb(121, 6, 6);
+}
+#resetar:active{
+    background-color: black;
 }

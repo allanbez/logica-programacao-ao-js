@@ -9,16 +9,20 @@
 <body>
     
 
-    <nav>
+    <div id="menu">
         <ul>
            <button><a href="desafio-triângulo.html">Desafio triângulo</a></button>
-            <button><a href="desconto.html">desconto</a></button>
-            <button><a href="futebol.html">futebol</a></button>
+            <button><a href="desconto.html">desafio-desconto</a></button>
+            <button><a href="futebol.html">desafio-futebol</a></button>
             <button><a href="nome.html">desafio-nomes</a></button>
+            <button><a href="produtos.html">desafios-produtos</a></button>
+            <button><a href="gasolina.html">desafio-gasolina</a></button>
         </ul>
-    </nav>
+    </div>
     <h1>Programinhas</h1>
     <!-- TODO: eliminar esses botões -->
+
+
     
 
     <h2>Calculadora de IMC</h2>
@@ -73,7 +77,15 @@
             
             <script src="desafio2.js"></script>
             <script src="desafio3.js"></script>
+
             <script>
+                
+
+
+
+
+
+
                 document.querySelector('#btCalcIMC').addEventListener('click', function () {
                     const peso = document.querySelector('#peso').value;
                     const altura = document.querySelector('#altura').value;
@@ -92,9 +104,14 @@
                     const escalaAtual = document.querySelector('#escalaAtual').value;
                     const escalaConversao = document.querySelector('#escalaConvertida').value;
 
+
+
                     const conversao = converteTemperatura(temperaturaAtual, escalaAtual, escalaConversao);
 
+
                     document.querySelector('#resultadotemperatura').innerHTML = `Temperatura convertida: ${conversao.temperaturaConvertida + conversao.escalaConversao}`;
+
+
                 });
                 document.querySelector('#btReset').addEventListener(`click`, function(){
                 document.querySelector('#resultadotemperatura').innerHTML = "";

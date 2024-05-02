@@ -33,4 +33,33 @@ ul{
     justify-content: space-around;
     margin: 0;
 }
+#BTveri{
+    background-color: rgb(215, 28, 228);
+    padding: 5px 30px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+#BTveri:hover{
+    background-color: rgb(105, 46, 163);
+}
+#BTveri:active{
+    background-color: rgb(48, 0, 94);
+
+
+}#clean{
+    background-color: rgb(215, 28, 228);
+    padding: 5px 30px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+#clean:hover{
+    background-color: rgb(105, 46, 163);
+}
+#clean:active{
+    background-color: rgb(48, 0, 94);
+}
 

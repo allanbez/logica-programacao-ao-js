@@ -34,6 +34,7 @@
     
     <script>
         document.querySelector('#btcalcular').addEventListener('click', () => {
+            
             const codigoproduto = Number(document.querySelector('#codigoproduto').value);
 
             const qtdeproduto = Number(document.querySelector('#qtdeproduto').value);
@@ -41,6 +42,7 @@
             const produto = calculadesconto(codigoproduto, qtdeproduto);
 
             const pdescricao = document.createElement('p');
+
 
             pdescricao.innerHTML = produto.descricao;
             pdescricao.setAttribute('data-produto', produto.codigo);
@@ -50,7 +52,9 @@
             pvalorfinal.innerHTML = produto.valorfinal.toFixed(2);
             pvalorfinal.classList.add('monetario')
 
+
             document.querySelector('#resultado').append(pdescricao, pvalorfinal);
+            
         })
         const produtos = [
             {
