@@ -1,39 +1,42 @@
 
-// <a> do Home
-const home =criaAncora('/index.html','home')
+const ancoras = [
+    {"url": "/index.html","texto":"home"},
+    {"url": "/exercicios/desafio-triangulo.html","texto":"exerc.1"},
+    {"url": "/exercicios/produtos.html","texto":"exerc.6"}
+];
 
-// <li> do Home
-const liHome = document.createElement('li');
-liHome.appendChild(aHome);
+function criaAncora(url,texto){
+
+    const aExercicio1 = document.createElement('a');
+ancoras.setAttribute('href',url);
+ancoras.innerHTML = texto;
+
+return ancora;
+}
+function criali(ancora){
+    const li =document.createElement('li');
+li.appendChild(ancora);
+return li
+}
+function criaUlnav(ancoras){
+    const ul =document.createElement('ul')
+    ancoras.forEach(ancora => {
+        const a = criaAncora(ancoras.url,ancora.texto)
+        const li = criali(a)
+        ul.appendChild(li)
+        
+    });
+    return li
+}
 
 
-// <a> do exercício 1
-const exercicio1=criaAncora('/exercicicos/desafio-triangulo.html','exrc.1');
-const aExercicio1 = document.createElement('a');
-aExercicio1.setAttribute('href', '/exercicios/exercicio1.html');
-aExercicio1.innerHTML = 'Exerc. 1';
 
-// <li> do exercício 1
-const liExercicio1 = document.createElement('li');
-liExercicio1.appendChild(aExercicio1);
 
-// <a> do exercício 6
-const aExercicio6 = document.createElement('a');
-aExercicio6.setAttribute('href', '/exercicios/exercicio6.html');
-aExercicio6.innerHTML = 'Exerc. 6';
-
-// <li> do exercício 6
-const liExercicio6 = document.createElement('li');
-liExercicio6.appendChild(aExercicio6);
-
-// <ul> do menu
-const ulNav = document.createElement('ul');
-ulNav.append(liHome, liExercicio1, liExercicio6);
 
 // <nav> do menu
 const nav = document.createElement('nav');
 nav.classList.add('menu-navegacao');
-nav.appendChild(ulNav);
+nav.appendChild(criaUlnav(ancoras));
 
 // Aqui segue de acordo com a solução do professor...
 
@@ -65,17 +68,3 @@ linkNavbar.setAttribute('href', '/css/navbar.css');
 
 document.head.appendChild(linkNavbar);
 
-
-function criaAncora(url,texto){
-
-    const aExercicio1 = document.createElement('a');
-ancora.setAttribute('href'/url);
-ancora.innerHTML = texto;
-
-return ancora;
-}
-function criali(ancora){
-    const li =documente.createElement('li');
-li.appendChild(ancora);
-return li
-}
