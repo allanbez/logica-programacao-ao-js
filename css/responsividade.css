@@ -1,0 +1,33 @@
+/* 
+tamanho padrao para::
+mobile:->400px
+tablet->768px
+Tvs:->maior que 1920px
+*/
+/* mobile */
+@media screen and (max-width:400px){
+.titulo-pagina{
+width: 100%;
+}
+main{
+    width: 100%;
+}
+.elementos-em-linha,.botoes{
+    flex-direction: column;
+    
+}
+.botoes{
+    
+}
+}
+
+/* tablet  */
+@media screen and (max-width:768px){
+
+
+
+}
+/* tvs */
+@media screen and (min-width:1921px){
+
+}
