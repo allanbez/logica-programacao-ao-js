@@ -33,7 +33,7 @@
     height: 100%;
     display: inline-flex;
     align-items: center;
-    color: ghostwhite;
+    color: rgb(92, 245, 148);
     text-transform: uppercase;
     font-family: 'Ubuntu', sans-serif;
     font-size: 1.2rem; /* 120% do tamanho padrão */
@@ -42,8 +42,8 @@
 
 .menu-navegacao a:hover {
     cursor: pointer;
-    background-color: ghostwhite;
-    color: #38393C;
+    background-color: rgb(106, 106, 194);
+    color: #000d39;
     transition-duration: 300ms;
 }
 
