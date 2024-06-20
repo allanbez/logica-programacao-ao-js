@@ -1,12 +1,12 @@
 const ancoras = [
     { "url": "/index.html", "texto": "Home" },
     { "url": "/Exercicios/desafio-triângulo.html", "texto": "Exerc. 1" },
-    { "url": "/exercicios/desconto.html", "texto": "Exerc. 2" },
-    { "url": "/exercicios/futebol.html", "texto": "Exerc. 3" },
-    { "url": "/exercicios/nome.html", "texto": "Exerc. 4" },
-    { "url": "/exercicios/gasolina.html", "texto": "Exerc. 5" },
-    { "url": "/exercicios/produtos.html", "texto": "Exerc. 6" },
-    { "url": "/exercicios/exercicio7.html", "texto": "Exerc. 7" }
+    { "url": "/Exercicios/desconto.html", "texto": "Exerc. 2" },
+    { "url": "/Exercicios/futebol.html", "texto": "Exerc. 3" },
+    { "url": "/Exercicios/nome.html", "texto": "Exerc. 4" },
+    { "url": "/Exercicios/gasolina.html", "texto": "Exerc. 5" },
+    { "url": "/Exercicios/produtos.html", "texto": "Exerc. 6" },
+    { "url": "/Exercicios/exercicio7.html", "texto": "Exerc. 7" }
 ];
 
 function criaAncora(url, texto) {
